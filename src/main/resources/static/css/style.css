@@ -11,47 +11,73 @@ body.loaded {
     opacity: 1;
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body::after {
+    content: "Suryansh Jaryal";
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+    z-index: 9999;
+}
+
 h1, h2 {
     text-align: center;
     margin-top: 20px;
-    color: #ffebcd; /* light color matching the background */
+    color: #ffebcd;
 }
 
 h1.form-heading, h2.form-heading {
-    color: #fff; /* white color for form headings */
+    color: #fff;
 }
 
 .container {
     margin-top: 50px;
-    background-color: rgba(0, 0, 0, 0.6); /* semi-transparent background for better readability */
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 20px;
     border-radius: 10px;
-    color: #fff; /* white text inside the container */
+    color: #fff;
+    animation: fadeIn 1s ease-in-out; /* Fade-in effect for the container */
 }
 
 .table {
     margin-top: 20px;
-    color: #fff; /* white text for the table */
+    color: #fff;
 }
 
 .table th, .table td {
-    color: #fff; /* ensure table text is white */
+    color: #fff;
 }
 
 .btn {
     margin-right: 5px;
 }
 
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Light background on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
 a {
-    color: #ffebcd; /* link color */
+    color: #ffebcd;
 }
 
 a.btn {
-    color: #fff; /* button link color */
+    color: #fff;
 }
 
 input, button {
-    color: #000; /* black text for form elements */
+    color: #000;
 }
 
 label {
@@ -59,7 +85,7 @@ label {
 }
 
 .card {
-    background-color: rgba(255, 255, 255, 0.8); /* white background for the card with some transparency */
+    background-color: rgba(255, 255, 255, 0.8);
     border: none;
     border-radius: 10px;
 }
